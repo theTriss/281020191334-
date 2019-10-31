@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --first-font-size: .75em;
+    --second-font-size: .875em;
+    --icon-color: #73b4d5;
+    --base-border: #ccc;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.padding {
+    padding: 0 1em;
+}
+
+.profilePage {
+    margin: 0 auto;
+    padding: 1em 0 0;
+    max-width: 720px;
+    min-width: 360px;
+    font-family: Arial,  sans-serif;
+}

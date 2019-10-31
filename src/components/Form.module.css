@@ -1,0 +1,35 @@
+.commentForm {
+    composes: padding from 'ProfilePage.module.css';
+    margin-top: 1.5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    width: 100%;
+    background: #f2f2f2;
+}
+
+.commentForm__textarea {
+    margin-bottom: 1em;
+    padding: 0.3em;
+    width: 100%;
+    height: 70px;
+    border: 1px solid var(--base-border, #ccc);
+    outline: none;
+    font: 1rem Arial;
+    resize: none;
+    overflow: auto;
+}
+
+.сommentForm__btnWraper {
+    text-align: center;
+}
+
+.commentForm__btn {
+    padding: 1em 4em;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    font-size: 1em; 
+    font-weight: 700;
+    background: #fdd639;
+    cursor: pointer;
+}

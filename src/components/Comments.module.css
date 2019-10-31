@@ -1,0 +1,140 @@
+.comments {
+    composes: padding from 'ProfilePage.module.css';
+}
+
+.comments__item {
+    margin-top: 1em;
+} 
+
+.comments__info {
+    margin-bottom: 1em;
+}
+
+.comments__user {
+    display: inline-block;
+    margin-right: .5em;
+    font-weight: 700;
+    font-size: var(--second-font-size, .875em);
+}
+
+.comments__date {
+    display: inline-block;
+    font-size: var(--first-font-size, .75em);
+    color: #808080;
+}
+
+.comments__comment {
+    position: relative;
+    padding: 1em;
+    border: 1px solid var(--base-border, #ccc);
+    font-size: var(--second-font-size, .875em);
+    background: #f2fbff;
+}
+
+.comments__comment::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    width: 0;
+	height: 0;
+	border-bottom: 10px solid var(--base-border, #ccc); 
+    border-right: 10px solid transparent;
+}
+
+.comments__comment::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 31px;
+    width: 0;
+	height: 0;
+	border-bottom: 8px solid #f2fbff; 
+    border-right: 8px solid transparent;
+    z-index: 1;
+}
+
+.panel:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.panel__lastComments {
+    display: inline-block;
+    margin-right: .5em;
+    font-weight: 700;
+}
+
+.panel__link {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: var(--second-font-size, .875em);
+    color: #2b6ba8
+}
+
+.panel__link:visited {
+    color: #2b6ba8
+}
+
+.panel__statistic {
+    float: right;
+}
+
+
+.statistic__item {
+    display: inline-block;
+    font-size: var(--second-font-size, .875em);
+}
+
+.statistic__item_first {
+    margin-right: .7em;
+}
+
+.statistic__icon {
+    display: inline-block;
+    position: relative;
+    margin-right: .3em;
+    width: 15px;
+    height: 12px;
+}
+
+.statistic__counter {
+    display: inline-block;
+}
+
+.statistic__icon_comments {
+    border-radius: 2px;
+    background: var(--icon-color, #73b4d5);
+}
+
+.statistic__icon_comments:after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: 3px;
+	width: 0;
+	height: 0;
+	border-top: 5px solid var(--icon-color, #73b4d5); 
+	border-left: 5px solid transparent;
+	
+}
+
+.statistic__icon_likes:before,
+.statistic__icon_likes:after {
+    position: absolute;
+    content: "";
+    left: 8px;
+    top: 1px;
+    width: 8px;
+    height: 12px;
+    background: var(--icon-color, #73b4d5);
+    border-radius: 8px 8px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+.statistic__icon_likes:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin :100% 100%;
+}

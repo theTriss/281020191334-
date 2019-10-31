@@ -1,0 +1,152 @@
+.profile {
+    composes: padding from 'ProfilePage.module.css';
+}
+
+.profile__about {
+    display: inline-block;
+    width: calc(100% - 128px);
+}
+
+.profile__photoWraper {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin-right: .5em;
+    width: 120px;
+    height: 120px;
+    z-index: 1;
+}
+
+.profile__photo {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.about__name {
+    margin-bottom: .3em;
+    font-weight: 700;
+}
+
+.about__position {
+    margin-bottom: .5em;
+    font-size: var(--first-font-size, .75em);
+    color: #808080;
+}
+
+.about__status {
+    box-sizing: border-box;
+    width: calc(100% + 50px);
+    padding: 1em .5em 1em 50px;
+    border: 1px solid var(--base-border, #ccc);
+    border-radius: 5px;
+    font-size: var(--second-font-size, .875em);
+    background: #fffbc8;
+    transform: translateX(-50px);
+}
+
+.service {
+    font-size: var(--second-font-size, .875em);
+}
+
+.service__titleWraper {
+    margin-bottom: 1rem;
+    padding: .5rem 0;
+    border-bottom: 1px solid var(--base-border, #ccc);
+}
+
+.service__titleWraper:after {
+    content: '';
+    display: block;
+    clear: both;
+} 
+
+.service__items {
+    border-left: 1px solid #3e9dc2;
+}
+
+.service__item {
+    margin-bottom: .1em;
+}
+
+.service__item:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.service__item_total {
+    margin-top: 1rem;
+    padding: .5rem 0;
+    border-top: 1px solid var(--base-border, #ccc);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.service__counter {
+    float: right;
+    width: 50px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.service__counter_title {
+    font-weight: normal;
+}
+
+.service__name {
+    float: left;
+    padding: 0.3rem;
+    border-radius: 0 3px 3px 0;
+    white-space: nowrap;
+}
+
+.service__name_first {
+    max-width: 300px;
+    width: calc(100% - 50px);
+    background: #b1e19b;
+}
+
+.service__name_second {
+    width: 60px;
+    background: #ace2f8;
+}
+
+.service__name_third {
+    width: 40px;
+    background: #ace2f8;
+}
+
+.service__name_total {
+    padding-left: 0;
+}
+
+
+@media screen and (max-width: 475px) {
+
+    .profile__about {
+        display: block;
+        width: 100%;
+    }
+
+    .about__name, .about__position  {
+        text-align: center;
+    }
+
+    .about__status {
+        padding: 1em .5em;
+        width: 100%;
+        transform: none;
+    }
+
+    .profile__photoWraper { 
+        display: block;
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .profile__photo {
+        border-radius: 50%;
+        width: 120px;
+    }
+}
